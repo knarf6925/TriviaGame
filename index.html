@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-     <title>unit-4-game</title>
+     <title>Rocky Trivia Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
      <link rel="stylesheet" type="text/css" href="assets/images/style.css">
@@ -10,24 +10,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
 
 </head>
 
  <body>
 
-<div class="jumbotron">
-  <h1 class="display-3">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
-                  calling extra attention to featured content or information.</p>
-  <hr class="my-2">
-  <p>It uses utility classes for typography and
-     spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#!" role="button">Some action</a>
-  </p>
+
+  <div class="container">
+    <div class="header text-center clearfix">
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+    <div id="game">
+    
+  <h1 class="display-3"><h1>Rocky Trivia Game</h1>
+  <p class="lead">Ay Yo! Welcome to Rocky Trivia</p>
+
 </div>
 
-
+ <div class="row">
+        <div id="choices" class="text-center">
+          <button id="start" class="btn btn-info btn-lg">Start Game</button>
+          <div id="options">
+          </div>
+        </div>
+ </div>
 
        
 
@@ -35,3 +43,7 @@
 
 
         </body>
+
+
+ <script src="assets/javascript/app.js"></script>  
+</html>
