@@ -1,24 +1,21 @@
 body{
    background-image: url(/Users/franksantiesteban/Desktop/TriviaGame/assets/images/wpid-rocky-movie.jpg);
    text-align: center;
-   opacity: 0.9;
-   
-
 }
-
-h1{
-    background: lightblue;
-   
-}
-
+  
 #Start{
     background: lightblue;
+    
+}
+
+#wrapper{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
-p {
-    background: clear;
-    color:darkred;
-
+#subwrapper {
+    color:tomato;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
