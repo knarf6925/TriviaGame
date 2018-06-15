@@ -6,6 +6,10 @@ $("#Start").on("click", function () {
     
 })
 
+$(document).on("click", "#end", function (){
+    game.done();
+})
+
 // questions var
 var questions = [{
     questions: "Who plays Rocky Balboa?",
@@ -54,20 +58,22 @@ var questions = [{
 var game = {
     correct: 0,
     incorrect: 0,
-    counter: 20,
+    counter: 30,
     countdown: function () {
         game.counter--;
         $('#counter').html(game.counter);
-        if (game.counter <= 0) {
+        if (game.counter === 0) {
             console.log("time is up");
+           alert("Times Up!")
             game.done();
+           
 
         }
         // function to attach timer and questions to subwrapper
     },
     start: function () {
         timer = setInterval(game.countdown, 1000);
-        $("#subwrapper").prepend("<h2>Time Remaining: <span id='counter'> 60 </span> Seconds </h2>");
+        $("#subwrapper").prepend("<h2>Time Remaining: <span id='counter'> 30 </span> Seconds </h2>");
         $("#Start").remove();
         for (var i = 0; i < questions.length; i++) {
             $("#subwrapper").append('<h2>' + questions[i].questions + '<h2>');
@@ -75,6 +81,7 @@ var game = {
                 $("#subwrapper").append("<input type='radio' name='questions-" + i + " ' value= '" + questions[i].answers[j] + " ' > " + questions[i].answers[j])
             }
         }
+        $("#subwrapper").append("<br><button id='end'>Done</button");
     },
 
     // function to check answers 1-10
@@ -165,13 +172,13 @@ var game = {
     },
 
     result: function () {
-        clearIntervalval(timer);
+        clearInterval(timer);
         $("#subwrapper h2").remove();
-
         $("#subwrapper").htmnl("<h2>Ay Yo! Your done!</h2>");
         $("#subwrapper").append("<h3>Correct Answers: " + this.correct + "</h3>");
         $("#subwrapper").append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
-
+        $("#subwrapper").append("<h3>Unanswered: "+(questios.length-(this.incorrect+this.correct))+ "</h3>");
+        
 
     }
 }
